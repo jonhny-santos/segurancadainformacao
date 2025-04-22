@@ -1,7 +1,7 @@
 /* === Fonte Terminal === */
 body {
   font-family: 'Courier New', monospace;
-  background: url("img/hacker.png") no-repeat center center fixed;
+  background: url("hacker.png") no-repeat center center fixed;
   background-size: cover;
   background-color: rgba(10, 20, 10, 0.9);
   color: #a5f2c8;
