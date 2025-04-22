@@ -1,0 +1,5 @@
+mkdir img
+touch img/.gitkeep
+git add img/.gitkeep
+git commit -m "Adiciona pasta de imagens com .gitkeep"
+git push
