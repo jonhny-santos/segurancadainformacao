@@ -1,0 +1,397 @@
+/* === Fonte Terminal === */
+body {
+  font-family: 'Courier New', monospace;
+  background: url("img/hacker.png") no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgba(10, 20, 10, 0.9);
+  color: #a5f2c8;
+  font-size: 14px;
+  line-height: 1.6;
+  backdrop-filter: blur(3px);
+}
+
+/* === Estilo do Header com Neon === */
+header {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  box-shadow: 0 0 10px #22c55e80;
+  border-bottom: 1px solid #22c55e;
+}
+
+header h1 {
+  color: #22c55e;
+  font-size: 1.8rem;
+  text-shadow: 0 0 10px #22c55e, 0 0 20px #22c55e66;
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #22c55e;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+header p {
+  color: #cbd5e1;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* === Container Centralizado === */
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 0 10px #0f0f0f;
+}
+
+/* === Categorias com Transição === */
+.category h2 {
+  color: #22c55e;
+  border-bottom: 1px solid #22c55e;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.category h2:hover {
+  color: #bbf7d0;
+  transform: scale(1.02);
+}
+
+.category ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.category.active ul {
+  max-height: 1500px;
+  transition: max-height 0.6s ease;
+}
+
+
+.category li {
+  margin-bottom: 0.3rem;
+}
+
+.category li a {
+  color: #bbf7d0;
+  text-decoration: none;
+  transition: text-shadow 0.3s ease;
+}
+
+.category li a:hover {
+  text-shadow: 0 0 5px #bbf7d0;
+  text-decoration: underline;
+}
+
+.subtitulo {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 1em 0 0.5em;
+  color: #33ff99;
+  list-style: none;
+}
+
+
+/* === Caixa de Busca === */
+.search-box {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+
+
+input[type="text"] {
+  max-width: 150px;
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #0f1f0f;
+  color: #a5f2c8;
+  box-shadow: 0 0 6px #22c55e, 0 0 12px #22c55e;
+  transition: box-shadow 0.3s ease;
+}
+
+
+button {
+  padding: 0.6rem 1.2rem;
+  background-color: #22c55e;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: #0f172a;
+  font-weight: bold;
+  box-shadow: 0 0 5px #22c55e80;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  background-color: #22c55e;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 0 10px #22c55e88, 0 0 20px #22c55e33;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+button:hover {
+  transform: scale(1.05);
+  background-color: #00ff66;
+  box-shadow: 0 0 15px #00ff66, 0 0 30px #00ff66;
+  color: #000;
+}
+
+
+/* === LinkedIn Button Estilizado === */
+.linkedin-btn {
+  display: inline-block;
+  background-color: #0a66c2;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.linkedin-btn:hover {
+  background-color: #004182;
+  box-shadow: 0 0 10px #0a66c2;
+}
+
+/* === Rodapé e Aviso === */
+footer, .aviso-importante {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #a5f2c8;
+  padding: 1rem;
+  border-top: 2px solid #22c55e;
+  margin-top: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.aviso-importante h3 {
+  color: #81c784;
+  margin-bottom: 10px;
+}
+
+/* === Responsivo === */
+@media (max-width: 768px) {
+  .search-box {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Realce do termo buscado */
+.highlight {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Mensagem de resultado */
+#mensagem-busca {
+  font-weight: bold;
+  color: #f87171;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.subtitulo {
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin-top: 1rem;
+  color: #22c55e;
+  cursor: pointer;
+  list-style: none;
+}
+
+.subtitulo:hover {
+  color: #bbf7d0;
+  text-decoration: underline;
+}
+
+.sub-itens {
+  padding-left: 1.5rem;
+  display: none;
+}
+
+.sub-itens.mostrar {
+  display: block;
+}
+#formFeedback {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+#formFeedback label {
+  font-weight: bold;
+  color: #a5f2c8;
+}
+
+#formFeedback input,
+#formFeedback textarea {
+  background-color: #0f1f0f;
+  color: #a5f2c8;
+  border: 1px solid #22c55e;
+  border-radius: 6px;
+  padding: 0.6rem;
+  font-family: 'Courier New', monospace;
+  resize: vertical;
+}
+
+#formFeedback textarea:focus,
+#formFeedback input:focus {
+  outline: none;
+  box-shadow: 0 0 8px #22c55e;
+}
+#formFeedback {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+#formFeedback label {
+  font-weight: bold;
+  color: #a5f2c8;
+}
+
+#formFeedback input,
+#formFeedback textarea {
+  background-color: #0f1f0f;
+  color: #a5f2c8;
+  border: 1px solid #22c55e;
+  border-radius: 6px;
+  padding: 0.6rem;
+  font-family: 'Courier New', monospace;
+  resize: vertical;
+}
+
+#formFeedback textarea:focus,
+#formFeedback input:focus {
+  outline: none;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+/* === Ajustes Responsivos Adicionais === */
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+    padding: 0 1rem;
+  }
+
+  header h1 {
+    font-size: 1.1rem;
+    white-space: normal;
+    border-right: none;
+    animation: none;
+  }
+
+  .container {
+    padding: 1rem 0.5rem;
+  }
+
+  .category h2 {
+    font-size: 1rem;
+  }
+
+  .search-box {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  input[type="text"] {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .linkedin-btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+
+a {
+  color: #00ff00;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 0 5px #00ff00;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: #bfff00;
+  text-shadow: 0 0 10px #bfff00, 0 0 20px #bfff00;
+}
+
+#data-hora {
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  color: #00ff00;
+  animation: codeGlow 2s infinite;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@keyframes codeGlow {
+  0% { text-shadow: 0 0 2px #00ff00; }
+  50% { text-shadow: 0 0 8px #00ff00, 0 0 15px #00ff00; }
+  100% { text-shadow: 0 0 2px #00ff00; }
+}
+
+#logo {
+  height: 60px;
+  width: auto;
+  filter: drop-shadow(0 0 4px #00ff00);
+}
+
+#logo {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#logo-titulo {
+  font-size: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  display: inline-block;
+}

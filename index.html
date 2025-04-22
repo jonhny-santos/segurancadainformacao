@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio interativo sobre Segurança da Informação." />
+  <meta name="author" content="Jonhny Santos" />
+  <title>Tabela Periódica da Segurança da Informação</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="logo.webp" as="image" type="image/webp">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="img/logo.webp" id="logo" alt="Logo" width="60" height="40" loading="lazy" />
+      <span id="logo-titulo">Tabela Periódica da Segurança da Informação</span>
+    </h1>
+    <p>Esta tabela interativa foi desenvolvida para tornar o aprendizado da Segurança da Informação mais acessível, visual e intuitivo.
+       Reunindo conceitos-chave, certificações, ataques, normas, ferramentas e muito mais, ela serve como um guia prático e didático para quem deseja explorar ou aprofundar seus conhecimentos na área.</p>
+    <p id="data-hora"></p>
+    <a class="linkedin-btn" href="https://www.linkedin.com/in/jonhnysantos/" target="_blank" rel="noopener">Siga-me no LinkedIn</a>
+  </header>
+  <div class="search-box">
+    <div id="mensagem-busca"></div>
+    <input id="busca" onkeyup="filtrarTermos()" placeholder="Pesquisar..." type="text" />
+    <button onclick="limparBusca()">Limpar</button>
+  </div>
+  <main class="container">
+   <main class="container">
+    <section class="category">
+      <h2>Sobre Mim</h2>
+      <ul>
+        <li>
+          <div class="conteudo-categoria">
+           <p><strong>Jonhny Santos</strong><br />Especialista em Segurança da Informação</p>
+				<p>Minha trajetória inclui forte atuação em Gestão de Identidades e Acessos (IAM), assegurando o controle seguro e eficiente de acessos para colaboradores e parceiros, em conformidade com políticas corporativas e melhores práticas de segurança. Utilizo ferramentas como Microsoft Entra ID (antigo Azure AD), Okta e FreeIPA para gestão centralizada de identidades.</p>
+				<p>Possuo expertise em Governança, Riscos e Conformidade (GRC), com aplicação prática de normas e regulamentos como ISO 27001, GDPR e LGPD, além da adoção de frameworks como NIST CSF, CIS Controls, COBIT, ITIL e MITRE ATT&CK para avaliação contínua de riscos e fortalecimento da postura de segurança.</p>
+				<p>Atuei em ambientes multicloud (AWS, Azure, GCP), implementando políticas de segurança baseadas em modelos como Zero Trust e princípios de least privilege, utilizando ferramentas como AWS IAM, Azure Security Center, Google Chronicle e CloudTrail para visibilidade e resposta a incidentes.</p>
+				<p>Tenho perfil colaborativo e multidisciplinar, atuando como ponte entre áreas técnicas e estratégicas, promovendo a integração entre equipes de infraestrutura, desenvolvimento e compliance. Sempre foco na eficiência operacional, automação de processos com SOARs como Cortex e Splunk Phantom, e mitigação de riscos com base em dados e inteligência de ameaças (Threat Intelligence).</p>
+
+          </div>
+        </li>
+      </ul>
+    </section>
+    <div id="categorias">
+ <section class="category">
+<h2>O que é Segurança da Informação?</h2>
+<ul class="conteudo-categoria">
+<!-- Introdução -->
+<li>
+<div class="subtitulo">Conceitos Fundamentais</div>
+<ul class="sub-itens">
+<!-- Conceitos de Segurança da Informação -->
+<li>
+<a href="https://pt.wikipedia.org/wiki/Seguran%C3%A7a_da_informa%C3%A7%C3%A3o" rel="noopener" target="_blank">
+            Segurança da Informação
+          </a> (Proteção de dados contra acesso, uso, divulgação, interrupção, modificação ou destruição não autorizada)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Tr%C3%ADade_CIA" rel="noopener" target="_blank">
+            Tríade CIA
+          </a> (Confidencialidade, Integridade e Disponibilidade)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Controle_de_acesso" rel="noopener" target="_blank">
+            Controle de Acesso
+          </a> (Princípios de necessidade, privilégio mínimo e separação de funções)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Pol%C3%ADtica_de_seguran%C3%A7a_da_informa%C3%A7%C3%A3o" rel="noopener" target="_blank">
+            Política de Segurança da Informação
+          </a> (Diretrizes e regras estabelecidas para proteger a informação da organização)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Seguran%C3%A7a_f%C3%ADsica" rel="noopener" target="_blank">
+            Segurança Física
+          </a> (Medidas de proteção física aos ativos de informação)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Gerenciamento_de_vulnerabilidades" rel="noopener" target="_blank">
+            Gerenciamento de Vulnerabilidades
+          </a> (Processo contínuo de identificar, avaliar e mitigar vulnerabilidades)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Criptografia" rel="noopener" target="_blank">
+            Criptografia
+          </a> (Técnicas para proteger a confidencialidade e integridade das informações)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Engenharia_social" rel="noopener" target="_blank">
+            Engenharia Social
+          </a> (Manipulação psicológica para obter acesso não autorizado a informações)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Seguran%C3%A7a_em_rede" rel="noopener" target="_blank">
+            Segurança de Redes
+          </a> (Proteção das redes contra acessos e ataques indevidos)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Resili%C3%AAncia_operacional" rel="noopener" target="_blank">
+            Resiliência Operacional
+          </a> (Capacidade de manter operações críticas diante de incidentes)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Gerenciamento_de_incidentes" rel="noopener" target="_blank">
+            Gestão de Incidentes
+          </a> (Processo de identificação, resposta e recuperação de eventos de segurança)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Conscientiza%C3%A7%C3%A3o_em_seguran%C3%A7a_da_informa%C3%A7%C3%A3o" rel="noopener" target="_blank">
+            Conscientização em Segurança
+          </a> (Educação e treinamento de usuários para boas práticas de segurança)
+        </li>
+</ul>
+</li>
+</ul>
+
+</section>
+<!-- Exemplo de categoria (você pode colar todas as outras aqui também) -->
+<section class="category">
+<h2>Certificações</h2>
+<ul class="conteudo-categoria">
+<li>
+<div class="subtitulo">Certificações Iniciais</div>
+<ul class="sub-itens">
+<li>
+<a href="https://www.comptia.org/certifications/security" rel="noopener" target="_blank">
+    CompTIA Security+
+  </a> (Fundamentos)
+</li>
+<li>
+<a href="https://www.cisco.com/site/us/en/products/security/certifications/ccna" rel="noopener" target="_blank">
+    Cisco CCNA
+  </a> (Redes)
+</li>
+<li>
+<a href="https://www.comptia.org/certifications/itf" rel="noopener" target="_blank">
+    CompTIA IT Fundamentals (ITF+)
+  </a> (Introdução à TI)
+</li>
+<li>
+<a href="https://www.coursera.org/professional-certificates/google-it-support" rel="noopener" target="_blank">
+    Google IT Support Professional
+  </a> (Suporte Técnico)
+</li>
+<li>
+<a href="https://www.microsoft.com/en-us/learning/mta-certification.aspx" rel="noopener" target="_blank">
+    Microsoft MTA (Security Fundamentals)
+  </a> (Fundamentos de Segurança)
+</li>
+<li>
+<a href="https://www.cybrary.it/course/comptia-a-plus/" rel="noopener" target="_blank">
+    CompTIA A+
+  </a> (Suporte Técnico e Hardware)
+</li>
+<li>
+<a href="https://juniper.net/us/en/training/certification/jncia-cloud.html" rel="noopener" target="_blank">
+    Juniper JNCIA
+  </a> (Redes e Cloud)
+</li>
+<li>
+<a href="https://www.ibm.com/training/badge/introduction-cybersecurity" rel="noopener" target="_blank">
+    IBM Cybersecurity Fundamentals
+  </a> (Fundamentos de Cibersegurança)
+</li>
+<li>
+<a href="https://www.eccouncil.org/programs/certified-cybersecurity-technician-cct/" rel="noopener" target="_blank">
+    EC-Council CCT
+  </a> (Técnico em Cibersegurança)
+</li>
+<li>
+<a href="https://securityblue.team/bite-sized-cybersecurity-certification" rel="noopener" target="_blank">
+    Security Blue Team BTL1
+  </a> (Defesa Cibernética)
+</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">Certificações Intermediárias </div>
+<ul class="sub-itens">
+<li>
+<a href="https://www.comptia.org/certifications/cysa" rel="noopener" target="_blank">
+    CompTIA CySA+
+  </a> (Análise de Segurança Cibernética)
+</li>
+<li>
+<a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/professional/ccnp-enterprise.html" rel="noopener" target="_blank">
+    Cisco CCNP Enterprise
+  </a> (Redes e Soluções Empresariais)
+</li>
+<li>
+<a href="https://learn.microsoft.com/en-us/certifications/security-compliance-and-identity-fundamentals/" rel="noopener" target="_blank">
+    Microsoft SC-200
+  </a> (Análise de Operações de Segurança)
+</li>
+<li>
+<a href="https://www.isaca.org/credentialing/cdpp" rel="noopener" target="_blank">
+    ISACA CDPSE
+  </a> (Privacidade e Engenharia de Dados)
+</li>
+<li>
+<a href="https://aws.amazon.com/certification/certified-security-specialty/" rel="noopener" target="_blank">
+    AWS Certified Security – Specialty
+  </a> (Segurança em Nuvem AWS)
+</li>
+<li>
+<a href="https://cloud.google.com/certification/security-engineer" rel="noopener" target="_blank">
+    Google Professional Cloud Security Engineer
+  </a> (Segurança em Nuvem Google)
+</li>
+<li>
+<a href="https://www.microsoft.com/en-us/learning/certification-overview.aspx" rel="noopener" target="_blank">
+    Microsoft Azure Security Engineer
+  </a> (Segurança em Nuvem Azure)
+</li>
+<li>
+<a href="https://www.ec-council.org/programs/ceh-certified-ethical-hacker/" rel="noopener" target="_blank">
+    EC-Council CEH
+  </a> (Hacking Ético)
+</li>
+<li>
+<a href="https://www.offsec.com/courses/pen-200/" rel="noopener" target="_blank">
+    Offensive Security OSCP
+  </a> (Pentest Profissional)
+</li>
+<li>
+<a href="https://www.isc2.org/Certifications/SSCP" rel="noopener" target="_blank">
+    ISC² SSCP
+  </a> (Administração de Segurança de Sistemas)
+</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">Certificações Avançadas</div>
+<ul class="sub-itens">
+<li>
+<a href="https://www.isc2.org/Certifications/CISSP" rel="noopener" target="_blank">
+    ISC² CISSP
+  </a> (Gestão de Segurança da Informação)
+</li>
+<li>
+<a href="https://www.isaca.org/credentialing/cism" rel="noopener" target="_blank">
+    ISACA CISM
+  </a> (Gestão de Segurança Corporativa)
+</li>
+<li>
+<a href="https://www.isaca.org/credentialing/cisa" rel="noopener" target="_blank">
+    ISACA CISA
+  </a> (Auditoria de Sistemas de Informação)
+</li>
+<li>
+<a href="https://www.giac.org/certifications/penetration-tester-gpen/" rel="noopener" target="_blank">
+    GIAC GPEN
+  </a> (Teste de Intrusão e Pentest)
+</li>
+<li>
+<a href="https://www.giac.org/certifications/security-expert-gse/" rel="noopener" target="_blank">
+    GIAC GSE
+  </a> (Especialista em Segurança)
+</li>
+<li>
+<a href="https://www.offsec.com/courses/exp-301/" rel="noopener" target="_blank">
+    Offensive Security OSEP
+  </a> (Evasão de Defesa e Pós-Exploração)
+</li>
+<li>
+<a href="https://www.offsec.com/courses/awae/" rel="noopener" target="_blank">
+    Offensive Security OSWE
+  </a> (Exploração de Aplicações Web)
+</li>
+<li>
+<a href="https://www.ec-council.org/programs/cciso/" rel="noopener" target="_blank">
+    EC-Council CCISO
+  </a> (Liderança Executiva em Segurança)
+</li>
+<li>
+<a href="https://www.sans.org/cyber-security-courses/enterprise-cloud-forensics-ir/" rel="noopener" target="_blank">
+    SANS FOR509
+  </a> (Resposta a Incidentes em Cloud)
+</li>
+<li>
+<a href="https://www.certified-in-cybersecurity.org/" rel="noopener" target="_blank">
+    ISC² CCSP
+  </a> (Segurança em Ambientes em Nuvem)
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="category">
+<h2>Cloud Computing</h2>
+<ul class="conteudo-categoria">
+<!-- Subcategoria: Conceitos Gerais -->
+<li>
+<div class="subtitulo">Conceitos Gerais</div>
+<ul class="sub-itens">
+<li>
+<a href="https://aws.amazon.com/pt/what-is-cloud-computing/" rel="noopener" target="_blank">
+            O que é Cloud Computing?
+          </a> (Conceito e fundamentos da computação em nuvem)
+        </li>
+</ul>
+</li>
+<!-- Subcategoria: Amazon Web Services (AWS) -->
+<li>
+<div class="subtitulo">Amazon Web Services (AWS)</div>
+<ul class="sub-itens">
+<li>
+<a href="https://aws.amazon.com/security/" rel="noopener" target="_blank">AWS Security</a> (Segurança na nuvem da Amazon)
+        </li>
+<li>
+<a href="https://aws.amazon.com/certification/certified-security-specialty/" rel="noopener" target="_blank">AWS Certified Security – Specialty</a> (Certificação de segurança avançada na AWS)
+        </li>
+<li>
+<a href="https://aws.amazon.com/artifact/" rel="noopener" target="_blank">AWS Artifact</a> (Gerenciamento de compliance e auditorias na AWS)
+        </li>
+<li>
+<a href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html" rel="noopener" target="_blank">AWS Security Hub</a> (Monitoramento de conformidade e segurança)
+        </li>
+<li>
+<a href="https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html" rel="noopener" target="_blank">AWS WAF</a> (Firewall para aplicações web)
+        </li>
+</ul>
+</li>
+<!-- Subcategoria: Google Cloud Platform (GCP) -->
+<li>
+<div class="subtitulo">Google Cloud Platform (GCP)</div>
+<ul class="sub-itens">
+<li>
+<a href="https://cloud.google.com/security" rel="noopener" target="_blank">Google Cloud Security</a> (Recursos de segurança do GCP)
+        </li>
+<li>
+<a href="https://cloud.google.com/security/overview" rel="noopener" target="_blank">Google Cloud Shared Responsibility Model</a> (Modelo de responsabilidade compartilhada do GCP)
+        </li>
+<li>
+<a href="https://cloud.google.com/security/command-center" rel="noopener" target="_blank">Google Cloud Security Command Center</a> (Gerenciamento centralizado de segurança no GCP)
+        </li>
+<li>
+<a href="https://cloud.google.com/certification/security-engineer" rel="noopener" target="_blank">Google Cloud Security Engineer</a> (Certificação de engenheiro de segurança em nuvem)
+        </li>
+</ul>
+</li>
+<!-- Subcategoria: Microsoft Azure -->
+<li>
+<div class="subtitulo">Microsoft Azure</div>
+<ul class="sub-itens">
+<li>
+<a href="https://learn.microsoft.com/en-us/security/" rel="noopener" target="_blank">Microsoft Azure Security</a> (Centro de segurança do Azure)
+        </li>
+<li>
+<a href="https://learn.microsoft.com/en-us/azure/security-center/security-center-introduction" rel="noopener" target="_blank">Azure Security Center</a> (Gerenciamento unificado de segurança)
+        </li>
+<li>
+<a href="https://learn.microsoft.com/en-us/certifications/azure-security-engineer/" rel="noopener" target="_blank">Microsoft Azure Security Engineer Associate</a> (Certificação de segurança para Azure)
+        </li>
+</ul>
+</li>
+<!-- Subcategoria: Normas e Padrões para Cloud -->
+<li>
+<div class="subtitulo">Normas e Padrões para Cloud</div>
+<ul class="sub-itens">
+<li>
+<a href="https://cloudsecurityalliance.org/research/cloud-controls-matrix" rel="noopener" target="_blank">CSA Cloud Controls Matrix</a> (Controles de segurança para ambientes em nuvem)
+        </li>
+<li>
+<a href="https://www.iso.org/standard/71670.html" rel="noopener" target="_blank">ISO/IEC 27017</a> (Norma de segurança para serviços em nuvem)
+        </li>
+<li>
+<a href="https://www.iso.org/standard/71673.html" rel="noopener" target="_blank">ISO/IEC 27018</a> (Proteção de dados pessoais em nuvem pública)
+        </li>
+<li>
+<a href="https://www.iso.org/standard/76559.html" rel="noopener" target="_blank">ISO/IEC 27701</a> (Privacidade da informação em serviços de nuvem)
+        </li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="category">
+<h2>Ferramentas de Segurança</h2>
+<ul class="conteudo-categoria">
+<li>
+<div class="subtitulo">Análise de Malware</div>
+<ul class="sub-itens">
+<li><a href="https://www.virustotal.com/" rel="noopener" target="_blank">VirusTotal</a> (Análise de arquivos suspeitos)</li>
+<li><a href="https://www.hybrid-analysis.com/" rel="noopener" target="_blank">Hybrid Analysis</a> (Sandbox para análise dinâmica)</li>
+<li><a href="https://www.any.run/" rel="noopener" target="_blank">ANY.RUN</a> (Análise interativa de malware)</li>
+<li><a href="https://www.joesandbox.com/" rel="noopener" target="_blank">Joe Sandbox</a> (Análise estática e dinâmica)</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">Forense Digital</div>
+<ul class="sub-itens">
+<li><a href="https://www.autopsy.com/" rel="noopener" target="_blank">Autopsy</a> (Análise forense de discos e arquivos)</li>
+<li><a href="https://www.sleuthkit.org/" rel="noopener" target="_blank">The Sleuth Kit</a> (Bibliotecas e ferramentas para investigação forense)</li>
+<li><a href="https://www.volatilityfoundation.org/" rel="noopener" target="_blank">Volatility</a> (Análise de memória RAM)</li>
+<li><a href="https://www.kali.org/tools/foremost/" rel="noopener" target="_blank">Foremost</a> (Recuperação de arquivos apagados)</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">DevSecOps</div>
+<ul class="sub-itens">
+<li><a href="https://snyk.io/" rel="noopener" target="_blank">Snyk</a> (Verificação de vulnerabilidades em código)</li>
+<li><a href="https://www.checkmarx.com/" rel="noopener" target="_blank">Checkmarx</a> (Análise de segurança em desenvolvimento)</li>
+<li><a href="https://owasp.org/www-project-dependency-check/" rel="noopener" target="_blank">OWASP Dependency-Check</a> (Análise de bibliotecas vulneráveis)</li>
+<li><a href="https://github.com/aquasecurity/trivy" rel="noopener" target="_blank">Trivy</a> (Scanner de vulnerabilidades em containers)</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">Criptografia</div>
+<ul class="sub-itens">
+<li><a href="https://www.gnupg.org/" rel="noopener" target="_blank">GnuPG</a> (Criptografia de e-mails e arquivos)</li>
+<li><a href="https://keepass.info/" rel="noopener" target="_blank">KeePass</a> (Gerenciador de senhas local)</li>
+<li><a href="https://www.veracrypt.fr/" rel="noopener" target="_blank">VeraCrypt</a> (Criação de volumes criptografados)</li>
+<li><a href="https://www.openssl.org/" rel="noopener" target="_blank">OpenSSL</a> (Ferramenta de criptografia e certificados)</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">Redes</div>
+<ul class="sub-itens">
+<li><a href="https://nmap.org/" rel="noopener" target="_blank">Nmap</a> (Scanner de redes e portas)</li>
+<li><a href="https://www.tcpdump.org/" rel="noopener" target="_blank">tcpdump</a> (Captura de pacotes via linha de comando)</li>
+<li><a href="https://www.wireshark.org/" rel="noopener" target="_blank">Wireshark</a> (Analisador de tráfego de rede)</li>
+<li><a href="https://iperf.fr/" rel="noopener" target="_blank">iPerf</a> (Teste de performance de rede)</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">Cloud Security</div>
+<ul class="sub-itens">
+<li><a href="https://cloudsploit.com/" rel="noopener" target="_blank">CloudSploit</a> (Verificação de configuração AWS)</li>
+<li><a href="https://github.com/nccgroup/ScoutSuite" rel="noopener" target="_blank">Scout Suite</a> (Auditoria multi-cloud)</li>
+<li><a href="https://www.paloaltonetworks.com/prisma/cloud" rel="noopener" target="_blank">Prisma Cloud</a> (Segurança para workloads na nuvem)</li>
+<li><a href="https://www.datadoghq.com/" rel="noopener" target="_blank">Datadog</a> (Monitoramento e segurança cloud)</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">GRC (Governança, Riscos e Conformidade)</div>
+<ul class="sub-itens">
+<li><a href="https://www.rsam.com/" rel="noopener" target="_blank">RSAM</a> (Gestão de riscos e compliance)</li>
+<li><a href="https://www.logicgate.com/" rel="noopener" target="_blank">LogicGate</a> (Plataforma GRC customizável)</li>
+<li><a href="https://www.metricstream.com/" rel="noopener" target="_blank">MetricStream</a> (GRC corporativo)</li>
+<li><a href="https://www.onetrust.com/" rel="noopener" target="_blank">OneTrust</a> (Privacidade e governança de dados)</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">IAM / PAM</div>
+<ul class="sub-itens">
+<li><a href="https://www.cyberark.com/" rel="noopener" target="_blank">CyberArk</a> (Gestão de acessos privilegiados - PAM)</li>
+<li><a href="https://www.okta.com/" rel="noopener" target="_blank">Okta</a> (IAM com SSO e MFA)</li>
+<li><a href="https://www.jumpcloud.com/" rel="noopener" target="_blank">JumpCloud</a> (Controle de identidade e dispositivos)</li>
+<li><a href="https://www.onelogin.com/" rel="noopener" target="_blank">OneLogin</a> (Gestão de identidade e autenticação)</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">Zero Trust</div>
+<ul class="sub-itens">
+<li><a href="https://www.zscaler.com/" rel="noopener" target="_blank">Zscaler</a> (Segurança baseada em Zero Trust)</li>
+<li><a href="https://www.cloudflare.com/learning/security/what-is-zero-trust/" rel="noopener" target="_blank">Cloudflare Zero Trust</a> (Acesso seguro sem VPN)</li>
+<li><a href="https://www.perimeter81.com/" rel="noopener" target="_blank">Perimeter 81</a> (Acesso corporativo com foco em Zero Trust)</li>
+<li><a href="https://www.ibm.com/security/zero-trust" rel="noopener" target="_blank">IBM Zero Trust</a> (Arquitetura de confiança zero)</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">Vulnerabilidades / CVEs</div>
+<ul class="sub-itens">
+<li><a href="https://cve.mitre.org/" rel="noopener" target="_blank">CVE Details</a> (Banco oficial de vulnerabilidades)</li>
+<li><a href="https://www.exploit-db.com/" rel="noopener" target="_blank">Exploit-DB</a> (Explorações públicas)</li>
+<li><a href="https://vulners.com/" rel="noopener" target="_blank">Vulners</a> (Busca e API de CVEs)</li>
+<li><a href="https://osv.dev/" rel="noopener" target="_blank">Open Source Vulnerabilities (OSV)</a> (Banco de dados de CVEs em projetos open source)</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">Firewall / IDS / IPS</div>
+<ul class="sub-itens">
+<li><a href="https://www.snort.org/" rel="noopener" target="_blank">Snort</a> (IDS/IPS de código aberto)</li>
+<li><a href="https://www.suricata.io/" rel="noopener" target="_blank">Suricata</a> (Análise profunda e detecção de intrusos)</li>
+<li><a href="https://opnsense.org/" rel="noopener" target="_blank">OPNsense</a> (Firewall e roteador open source)</li>
+<li><a href="https://www.pfsense.org/" rel="noopener" target="_blank">pfSense</a> (Firewall com recursos empresariais)</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">Red Team</div>
+<ul class="sub-itens">
+<li><a href="https://www.kali.org/" rel="noopener" target="_blank">Kali Linux</a> (Pentest e análise ofensiva)</li>
+<li><a href="https://www.parrotsec.org/" rel="noopener" target="_blank">Parrot OS</a> (Sistema operacional para Red Team)</li>
+<li><a href="https://www.metasploit.com/" rel="noopener" target="_blank">Metasploit Framework</a> (Exploração de vulnerabilidades)</li>
+<li><a href="https://portswigger.net/burp" rel="noopener" target="_blank">Burp Suite</a> (Teste de aplicações web)</li>
+<li><a href="https://github.com/EmpireProject/Empire" rel="noopener" target="_blank">Empire</a> (Pós-exploração com PowerShell)</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">Pentest</div>
+<ul class="sub-itens">
+<li><a href="https://nmap.org/" rel="noopener" target="_blank">Nmap</a> (Varredura de redes e portas)</li>
+<li><a href="https://github.com/sqlmapproject/sqlmap" rel="noopener" target="_blank">SQLmap</a> (Automatização de injeção SQL)</li>
+<li><a href="https://github.com/s0md3v/XSStrike" rel="noopener" target="_blank">XSStrike</a> (Scanner avançado de XSS)</li>
+<li><a href="https://owasp.org/www-project-zap/" rel="noopener" target="_blank">OWASP ZAP</a> (Scanner de vulnerabilidades em aplicações web)</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">SIEM</div>
+<ul class="sub-itens">
+<li><a href="https://www.splunk.com/" rel="noopener" target="_blank">Splunk</a> (SIEM e visualização de logs)</li>
+<li><a href="https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-sentinel" rel="noopener" target="_blank">Microsoft Sentinel</a> (SIEM baseado em nuvem da Microsoft)</li>
+<li><a href="https://www.graylog.org/" rel="noopener" target="_blank">Graylog</a> (Gerenciamento e análise de logs)</li>
+<li><a href="https://www.qradar.com/" rel="noopener" target="_blank">IBM QRadar</a> (Plataforma de SIEM da IBM)</li>
+</ul>
+</li>
+<li>
+<div class="subtitulo">Threat Intelligence</div>
+<ul class="sub-itens">
+<li><a href="https://www.misp-project.org/" rel="noopener" target="_blank">MISP</a> (Plataforma de compartilhamento de inteligência de ameaças)</li>
+<li><a href="https://otx.alienvault.com/" rel="noopener" target="_blank">AlienVault OTX</a> (Comunidade de inteligência de ameaças)</li>
+<li><a href="https://www.virustotal.com/" rel="noopener" target="_blank">VirusTotal</a> (Agregador de análise de ameaças)</li>
+<li><a href="https://intelx.io/" rel="noopener" target="_blank">Intelligence X</a> (Busca por vazamentos de dados e artefatos de inteligência)</li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="category">
+<h2>Frameworks</h2>
+<ul class="conteudo-categoria">
+<li>
+<a href="https://www.nist.gov/cyberframework/getting-started/online-learning" rel="noopener" target="_blank">
+     Curso Cybersecurity Framework do NIST - CSF 1.1
+  </a> (Gratuito)
+  </li>
+<li>
+<a href="https://www.nist.gov/cyberframework" rel="noopener" target="_blank">
+    NIST Cybersecurity Framework
+  </a> (Gestão de riscos)
+</li>
+<li>
+<a href="https://owasp.org/www-project-top-ten/" rel="noopener" target="_blank">
+    OWASP Top 10
+  </a> (Vulnerabilidades em aplicações web)
+</li>
+<li>
+<a href="https://www.iso.org/isoiec-27001-information-security.html" rel="noopener" target="_blank">
+    ISO/IEC 27001
+  </a> (Sistema de gestão de segurança da informação)
+</li>
+<li>
+<a href="https://www.iso.org/standard/54534.html" rel="noopener" target="_blank">
+    ISO/IEC 27002
+  </a> (Diretrizes para controles de segurança)
+</li>
+<li>
+<a href="https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final" rel="noopener" target="_blank">
+    NIST SP 800-53
+  </a> (Controles de segurança e privacidade)
+</li>
+<li>
+<a href="https://www.cisecurity.org/controls/cis-controls-list" rel="noopener" target="_blank">
+    CIS Controls
+  </a> (Controles essenciais para defesa cibernética)
+</li>
+<li>
+<a href="https://www.iso.org/standard/70331.html" rel="noopener" target="_blank">
+    ISO/IEC 27701
+  </a> (Privacidade e gestão de dados pessoais - extensão da 27001)
+</li>
+<li>
+<a href="https://www.enisa.europa.eu/topics/cybersecurity-policy/nis-directive" rel="noopener" target="_blank">
+    NIS Directive
+  </a> (Diretiva europeia sobre segurança de redes e informação)
+</li>
+<li>
+<a href="https://www.ncsc.gov.uk/collection/caf" rel="noopener" target="_blank">
+    CAF (Cyber Assessment Framework)
+  </a> (Avaliação de maturidade cibernética - NCSC UK)
+</li>
+<li>
+<a href="https://cloudsecurityalliance.org/research/cloud-controls-matrix" rel="noopener" target="_blank">
+    CSA Cloud Controls Matrix
+  </a> (Controles de segurança para ambientes em nuvem)
+</li>
+</ul>
+</section>
+<section class="category">
+<h2>Funções e Cargos</h2>
+<ul class="conteudo-categoria">
+<!-- NÍVEL INICIANTE -->
+<li>
+<a href="https://programae.org.br/seguranca/quais-sao-os-cargos-de-seguranca-da-informacao/" rel="noopener" target="_blank">
+    Estagiário de Segurança da Informação
+  </a> (Suporte e atividades básicas de segurança)
+</li>
+<li>
+<a href="https://programae.org.br/seguranca/quais-sao-os-cargos-de-seguranca-da-informacao/" rel="noopener" target="_blank">
+    Suporte Técnico de TI
+  </a> (Atendimento de primeiro nível e triagem)
+</li>
+<li>
+<a href="https://programae.org.br/seguranca/quais-sao-os-cargos-de-seguranca-da-informacao/" rel="noopener" target="_blank">
+    Analista Júnior de Segurança
+  </a> (Monitoramento e resposta a alertas básicos)
+</li>
+<li>
+<a href="https://programae.org.br/seguranca/quais-sao-os-cargos-de-seguranca-da-informacao/" rel="noopener" target="_blank">
+    Assistente de GRC
+  </a> (Apoio em governança, riscos e compliance)
+</li>
+<!-- NÍVEL INTERMEDIÁRIO -->
+<li>
+<a href="https://querobolsa.com.br/carreiras-e-profissoes/analista-de-seguranca-da-informacao" rel="noopener" target="_blank">
+    Analista de Segurança da Informação
+  </a> (Proteção de ativos e dados)
+</li>
+<li>
+<a href="https://programae.org.br/seguranca/quais-sao-os-cargos-de-seguranca-da-informacao/" rel="noopener" target="_blank">
+    Analista de SOC
+  </a> (Monitoramento de eventos e resposta a incidentes)
+</li>
+<li>
+<a href="https://programae.org.br/seguranca/quais-sao-os-cargos-de-seguranca-da-informacao/" rel="noopener" target="_blank">
+    Analista de GRC
+  </a> (Gestão de riscos, políticas e conformidade)
+</li>
+<li>
+<a href="https://programae.org.br/seguranca/quais-sao-os-cargos-de-seguranca-da-informacao/" rel="noopener" target="_blank">
+    Analista de Vulnerabilidades
+  </a> (Varredura, análise e tratamento de falhas)
+</li>
+<li>
+<a href="https://www.redteambrasil.com.br/o-que-e-pentest/" rel="noopener" target="_blank">
+    Pentester
+  </a> (Testes de intrusão e simulações ofensivas)
+</li>
+<li>
+<a href="https://www.cyberdegrees.org/resources/computer-forensics/" rel="noopener" target="_blank">
+    Analista Forense Digital
+  </a> (Investigação de incidentes e coleta de evidências)
+</li>
+<!-- NÍVEL AVANÇADO -->
+<li>
+<a href="https://pt.wikipedia.org/wiki/Seguran%C3%A7a_de_computadores" rel="noopener" target="_blank">
+    Engenheiro de Segurança
+  </a> (Implantação de soluções e arquitetura de segurança)
+</li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Seguran%C3%A7a_de_computadores" rel="noopener" target="_blank">
+    Consultor de Segurança
+  </a> (Avaliação e orientação estratégica em segurança)
+</li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Seguran%C3%A7a_de_computadores" rel="noopener" target="_blank">
+    Arquiteto de Segurança
+  </a> (Desenho de soluções seguras em infraestrutura e cloud)
+</li>
+<li>
+<a href="https://www.techtarget.com/searchsecurity/definition/red-team" rel="noopener" target="_blank">
+    Red Team Specialist
+  </a> (Simulação de ataques reais e testes avançados)
+</li>
+<li>
+<a href="https://www.techtarget.com/searchsecurity/definition/blue-team" rel="noopener" target="_blank">
+    Blue Team Specialist
+  </a> (Defesa proativa e análise comportamental de ameaças)
+</li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Gest%C3%A3o_de_seguran%C3%A7a_da_informa%C3%A7%C3%A3o" rel="noopener" target="_blank">
+    Gerente de Segurança da Informação
+  </a> (Liderança de equipes, projetos e políticas)
+</li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Chief_information_security_officer" rel="noopener" target="_blank">
+    CISO
+  </a> (Chief Information Security Officer)
+</li>
+</ul>
+</section>
+<section class="category">
+<h2>Leis e Regulamentações</h2>
+<ul class="conteudo-categoria">
+<li>
+<a href="https://www.gov.br/secretariageral/pt-br/lgpd" rel="noopener" target="_blank">
+    LGPD
+  </a> (Lei Geral de Proteção de Dados – Brasil)
+</li>
+<li>
+<a href="https://gdpr.eu/" rel="noopener" target="_blank">
+    GDPR
+  </a> (Regulamento Geral sobre a Proteção de Dados – Europa)
+</li>
+<li>
+<a href="https://www.hhs.gov/hipaa/index.html" rel="noopener" target="_blank">
+    HIPAA
+  </a> (Privacidade de informações de saúde – EUA)
+</li>
+<li>
+<a href="https://www.privacy.gov.au/" rel="noopener" target="_blank">
+    Privacy Act (Austrália)
+  </a> (Lei nacional de proteção de dados pessoais)
+</li>
+<li>
+<a href="https://www.pipeda.org/" rel="noopener" target="_blank">
+    PIPEDA
+  </a> (Lei de proteção de dados pessoais – Canadá)
+</li>
+<li>
+<a href="https://oag.ca.gov/privacy/ccpa" rel="noopener" target="_blank">
+    CCPA
+  </a> (Lei de privacidade do consumidor – Califórnia)
+</li>
+<li>
+<a href="https://www.iso.org/standard/81681.html" rel="noopener" target="_blank">
+    ISO/IEC 27552
+  </a> (Extensão à ISO 27001 para gestão de privacidade)
+</li>
+<li>
+<a href="https://www.bis.org/bcbs/index.htm" rel="noopener" target="_blank">
+    Basel III
+  </a> (Regras de segurança e risco para instituições financeiras)
+</li>
+<li>
+<a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX%3A32013R0910" rel="noopener" target="_blank">
+    eIDAS
+  </a> (Regulamento europeu de identidade digital e assinaturas eletrônicas)
+</li>
+<li>
+<a href="https://www.bcb.gov.br/estabilidadefinanceira/openbanking" rel="noopener" target="_blank">
+    Open Banking Brasil
+  </a> (Compartilhamento seguro de dados financeiros)
+</li>
+</ul>
+</section>
+<section class="category">
+<h2>GRC - Governança, Riscos e Conformidade</h2>
+<ul class="conteudo-categoria">
+<!-- Introdução ao GRC -->
+<li>
+<div class="subtitulo">Introdução ao GRC</div>
+<ul class="sub-itens">
+<li>
+<a href="https://en.wikipedia.org/wiki/Governance,_risk_management,_and_compliance" rel="noopener" target="_blank">
+            O que é GRC?
+          </a> (Integração de práticas para garantir que uma organização atue com ética, gerencie riscos e esteja em conformidade com regulamentações)
+        </li>
+</ul>
+</li>
+<!-- Governança -->
+<li>
+<div class="subtitulo">Governança Corporativa</div>
+<ul class="sub-itens">
+<li>
+<a href="https://pt.wikipedia.org/wiki/Governan%C3%A7a_corporativa" rel="noopener" target="_blank">Governança Corporativa</a> (Estrutura e práticas para tomada de decisões éticas e transparentes)
+        </li>
+<li>
+<a href="https://www.iso.org/standard/64615.html" rel="noopener" target="_blank">ISO 37000</a> (Diretrizes para a governança de organizações)
+        </li>
+<li>
+<a href="https://www.isaca.org/resources/cobit" rel="noopener" target="_blank">COBIT</a> (Framework para governança de TI e alinhamento estratégico)
+        </li>
+</ul>
+</li>
+<!-- Gestão de Riscos -->
+<li>
+<div class="subtitulo">Gestão de Riscos</div>
+<ul class="sub-itens">
+<li>
+<a href="https://www.iso.org/iso-31000-risk-management.html" rel="noopener" target="_blank">ISO 31000</a> (Princípios e diretrizes para gestão de riscos)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Risk_assessment" rel="noopener" target="_blank">Avaliação de Riscos</a> (Identificação, análise e priorização de riscos)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Risk_mitigation" rel="noopener" target="_blank">Mitigação de Riscos</a> (Ações para reduzir a probabilidade ou impacto dos riscos)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Risk_register" rel="noopener" target="_blank">Registro de Riscos</a> (Documentação dos riscos identificados e das ações planejadas)
+        </li>
+</ul>
+</li>
+<!-- Conformidade -->
+<li>
+<div class="subtitulo">Conformidade Regulatória</div>
+<ul class="sub-itens">
+<li>
+<a href="https://pt.wikipedia.org/wiki/Lei_Geral_de_Prote%C3%A7%C3%A3o_de_Dados" rel="noopener" target="_blank">LGPD</a> (Lei brasileira de proteção de dados pessoais)
+        </li>
+<li>
+<a href="https://gdpr-info.eu/" rel="noopener" target="_blank">GDPR</a> (Regulamento europeu de proteção de dados)
+        </li>
+<li>
+<a href="https://www.iso.org/isoiec-27001-information-security.html" rel="noopener" target="_blank">ISO/IEC 27001</a> (Gestão de segurança da informação)
+        </li>
+<li>
+<a href="https://www.iso.org/standard/50034.html" rel="noopener" target="_blank">ISO 19600</a> (Diretrizes para sistemas de compliance)
+        </li>
+</ul>
+</li>
+<!-- Controles Internos -->
+<li>
+<div class="subtitulo">Controles Internos</div>
+<ul class="sub-itens">
+<li>
+<a href="https://www.coso.org/" rel="noopener" target="_blank">COSO</a> (Modelo para avaliação de controles internos e gerenciamento de riscos)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Internal_control" rel="noopener" target="_blank">Controle Interno</a> (Processos para assegurar integridade e cumprimento de objetivos)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/SOX_Compliance" rel="noopener" target="_blank">SOX (Sarbanes-Oxley)</a> (Requisitos legais para controles financeiros e auditoria)
+        </li>
+</ul>
+</li>
+<!-- Auditoria e Monitoramento -->
+<li>
+<div class="subtitulo">Auditoria e Monitoramento</div>
+<ul class="sub-itens">
+<li>
+<a href="https://en.wikipedia.org/wiki/IT_audit" rel="noopener" target="_blank">Auditoria de TI</a> (Avaliação da conformidade e eficácia dos controles de tecnologia)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Internal_audit" rel="noopener" target="_blank">Auditoria Interna</a> (Atividade independente para avaliação e melhoria dos processos de governança)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Continuous_monitoring" rel="noopener" target="_blank">Monitoramento Contínuo</a> (Análise constante para identificar desvios e riscos)
+        </li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="category">
+<h2>IAM (Gerenciamento de Identidade e Acesso)</h2>
+<ul class="conteudo-categoria">
+<!-- Introdução -->
+<li>
+<div class="subtitulo">O que é IAM?</div>
+<ul class="sub-itens">
+<li>
+<a href="https://en.wikipedia.org/wiki/Identity_management" rel="noopener" target="_blank">
+            Conceito de IAM
+          </a> (Conjunto de políticas e tecnologias para garantir que as pessoas certas tenham o acesso apropriado aos recursos certos)
+        </li>
+</ul>
+</li>
+<!-- Subcategoria: Autenticação -->
+<li>
+<div class="subtitulo">Autenticação</div>
+<ul class="sub-itens">
+<li><a href="https://en.wikipedia.org/wiki/Multi-factor_authentication" rel="noopener" target="_blank">Autenticação Multifator (MFA)</a> (Camadas adicionais de verificação de identidade)</li>
+<li><a href="https://en.wikipedia.org/wiki/Single_sign-on" rel="noopener" target="_blank">Single Sign-On (SSO)</a> (Autenticação única para múltiplos sistemas)</li>
+<li><a href="https://en.wikipedia.org/wiki/Biometric_authentication" rel="noopener" target="_blank">Autenticação Biométrica</a> (Uso de características físicas como impressão digital ou íris)</li>
+<li><a href="https://en.wikipedia.org/wiki/Passwordless_authentication" rel="noopener" target="_blank">Autenticação sem Senha</a> (Uso de dispositivos ou biometria no lugar de senhas)</li>
+</ul>
+</li>
+<!-- Subcategoria: Autorização -->
+<li>
+<div class="subtitulo">Autorização</div>
+<ul class="sub-itens">
+<li><a href="https://en.wikipedia.org/wiki/Role-based_access_control" rel="noopener" target="_blank">RBAC</a> (Controle baseado em papéis)</li>
+<li><a href="https://en.wikipedia.org/wiki/Attribute-based_access_control" rel="noopener" target="_blank">ABAC</a> (Controle baseado em atributos)</li>
+<li><a href="https://en.wikipedia.org/wiki/Access_control_list" rel="noopener" target="_blank">ACL</a> (Listas de controle de acesso por objeto)</li>
+<li><a href="https://en.wikipedia.org/wiki/Policy-based_access_control" rel="noopener" target="_blank">PBAC</a> (Controle baseado em políticas organizacionais)</li>
+</ul>
+</li>
+<!-- Subcategoria: Gestão de Identidades -->
+<li>
+<div class="subtitulo">Gestão de Identidades</div>
+<ul class="sub-itens">
+<li><a href="https://en.wikipedia.org/wiki/Digital_identity" rel="noopener" target="_blank">Identidade Digital</a> (Representação digital de um usuário)</li>
+<li><a href="https://en.wikipedia.org/wiki/Identity_federation" rel="noopener" target="_blank">Federação de Identidade</a> (Autenticação cruzada entre domínios organizacionais)</li>
+<li><a href="https://en.wikipedia.org/wiki/Provisioning" rel="noopener" target="_blank">Provisionamento de Identidade</a> (Criação, modificação e remoção de contas de usuários)</li>
+<li><a href="https://en.wikipedia.org/wiki/Identity_governance" rel="noopener" target="_blank">Governança de Identidade</a> (Gerenciamento de direitos e compliance)</li>
+</ul>
+</li>
+<!-- Subcategoria: Protocolos de IAM -->
+<li>
+<div class="subtitulo">Protocolos de IAM</div>
+<ul class="sub-itens">
+<li><a href="https://en.wikipedia.org/wiki/SAML_2.0" rel="noopener" target="_blank">SAML</a> (Troca de dados de autenticação entre domínios)</li>
+<li><a href="https://en.wikipedia.org/wiki/OpenID_Connect" rel="noopener" target="_blank">OpenID Connect</a> (Autenticação federada baseada em OAuth 2.0)</li>
+<li><a href="https://en.wikipedia.org/wiki/OAuth" rel="noopener" target="_blank">OAuth 2.0</a> (Autorização delegada entre aplicações)</li>
+<li><a href="https://en.wikipedia.org/wiki/LDAP" rel="noopener" target="_blank">LDAP</a> (Protocolo para acesso e manutenção de serviços de diretório)</li>
+</ul>
+</li>
+<!-- Subcategoria: Gerenciamento de Acesso -->
+<li>
+<div class="subtitulo">Gerenciamento de Acesso</div>
+<ul class="sub-itens">
+<li><a href="https://en.wikipedia.org/wiki/Access_management" rel="noopener" target="_blank">Controle de Acesso</a> (Garantia de acesso adequado aos recursos)</li>
+<li><a href="https://en.wikipedia.org/wiki/Just-in-time_(JIT)_access" rel="noopener" target="_blank">Acesso Just-In-Time</a> (Concessão temporária de privilégios)</li>
+<li><a href="https://en.wikipedia.org/wiki/Privileged_access_management" rel="noopener" target="_blank">PAM (Privileged Access Management)</a> (Gestão de contas com altos privilégios)</li>
+</ul>
+</li>
+<!-- Subcategoria: Monitoramento e Auditoria -->
+<li>
+<div class="subtitulo">Monitoramento e Auditoria</div>
+<ul class="sub-itens">
+<li><a href="https://en.wikipedia.org/wiki/Audit_trail" rel="noopener" target="_blank">Trilha de Auditoria</a> (Registro detalhado de ações e acessos)</li>
+<li><a href="https://en.wikipedia.org/wiki/User_behavior_analytics" rel="noopener" target="_blank">UBA/UEBA</a> (Análise de comportamento de usuários para detectar anomalias)</li>
+<li><a href="https://en.wikipedia.org/wiki/Access_review" rel="noopener" target="_blank">Revisão de Acessos</a> (Verificação periódica de permissões atribuídas)</li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="category">
+<h2>Métricas</h2>
+<ul class="conteudo-categoria">
+<li>
+<a href="https://www.ibm.com/docs/en/cloud-paks/cp-security/1.10?topic=metrics-mttr-mean-time-recovery" rel="noopener" target="_blank">
+    MTTR
+  </a> (Tempo médio de recuperação)
+</li>
+<li>
+<a href="https://www.ibm.com/docs/en/cloud-paks/cp-security/1.10?topic=metrics-mttd-mean-time-detect" rel="noopener" target="_blank">
+    MTTD
+  </a> (Tempo médio de detecção)
+</li>
+<li>
+<a href="https://www.ibm.com/docs/en/cloud-paks/cp-security/1.10?topic=metrics-mtta-mean-time-acknowledge" rel="noopener" target="_blank">
+    MTTA
+  </a> (Tempo médio até o reconhecimento de um incidente)
+</li>
+<li>
+<a href="https://www.ibm.com/docs/en/cloud-paks/cp-security/1.10?topic=metrics-mtbf-mean-time-between-failures" rel="noopener" target="_blank">
+    MTBF
+  </a> (Tempo médio entre falhas)
+</li>
+<li>
+<a href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/security-controls-overview#incident-response-metrics" rel="noopener" target="_blank">
+    MTTI
+  </a> (Tempo médio até a contenção do incidente)
+</li>
+<li>
+<a href="https://www.varonis.com/blog/security-kpis" rel="noopener" target="_blank">
+    Número de Incidentes por Mês
+  </a> (Volume de eventos de segurança registrados)
+</li>
+<li>
+<a href="https://www.varonis.com/blog/security-kpis" rel="noopener" target="_blank">
+    Percentual de Incidentes Resolvidos
+  </a> (Proporção de eventos tratados com sucesso)
+</li>
+<li>
+<a href="https://www.varonis.com/blog/security-kpis" rel="noopener" target="_blank">
+    Tempo Médio de Resolução
+  </a> (Quanto tempo se leva para encerrar um incidente)
+</li>
+<li>
+<a href="https://www.varonis.com/blog/security-kpis" rel="noopener" target="_blank">
+    SLA de Resposta a Incidentes
+  </a> (Tempo acordado para resposta inicial a incidentes)
+</li>
+<li>
+<a href="https://www.varonis.com/blog/security-kpis" rel="noopener" target="_blank">
+    Taxa de Falsos Positivos
+  </a> (Alertas que não representam ameaças reais)
+</li>
+<li>
+<a href="https://www.varonis.com/blog/security-kpis" rel="noopener" target="_blank">
+    Taxa de Detecção de Ameaças
+  </a> (Efetividade na identificação de ataques)
+</li>
+</ul>
+</section>
+<section class="category">
+<h2>Normas Técnicas</h2>
+<ul class="conteudo-categoria">
+<li>
+<a href="https://www.iso.org/isoiec-27001-information-security.html" rel="noopener" target="_blank">
+    ISO/IEC 27001
+  </a> (Sistema de gestão de segurança)
+</li>
+<li>
+<a href="https://www.iso.org/standard/54534.html" rel="noopener" target="_blank">
+    ISO/IEC 27002
+  </a> (Diretrizes para controles de segurança)
+</li>
+<li>
+<a href="https://www.iso.org/standard/44375.html" rel="noopener" target="_blank">
+    ISO/IEC 27005
+  </a> (Gestão de riscos de segurança da informação)
+</li>
+<li>
+<a href="https://www.iso.org/standard/71670.html" rel="noopener" target="_blank">
+    ISO/IEC 27017
+  </a> (Segurança da informação para serviços em nuvem)
+</li>
+<li>
+<a href="https://www.iso.org/standard/71673.html" rel="noopener" target="_blank">
+    ISO/IEC 27018
+  </a> (Proteção de dados pessoais em nuvem)
+</li>
+<li>
+<a href="https://www.iso.org/standard/76559.html" rel="noopener" target="_blank">
+    ISO/IEC 27701
+  </a> (Gestão da privacidade — extensão da ISO/IEC 27001)
+</li>
+<li>
+<a href="https://www.iso.org/standard/63411.html" rel="noopener" target="_blank">
+    ISO/IEC 15408 (Common Criteria)
+  </a> (Avaliação da segurança de TI)
+</li>
+<li>
+<a href="https://www.nist.gov/publications/engineering-principles-information-technology-security" rel="noopener" target="_blank">
+    NIST SP 800-27
+  </a> (Princípios de engenharia para segurança da informação)
+</li>
+<li>
+<a href="https://www.iso.org/standard/45106.html" rel="noopener" target="_blank">
+    ISO/IEC 24762
+  </a> (Recuperação de desastres e continuidade de serviços de TI)
+</li>
+<li>
+<a href="https://www.iso.org/standard/73897.html" rel="noopener" target="_blank">
+    ISO/IEC 27032
+  </a> (Segurança no ciberespaço)
+</li>
+</ul>
+</section>
+<section class="category">
+<h2>Plataformas de Treinamento</h2>
+<ul class="conteudo-categoria">
+<!-- Subcategoria 1: Plataformas práticas de aprendizado -->
+<li>
+<div class="subtitulo">Plataformas Práticas</div>
+<ul class="sub-itens">
+<li><a href="https://tryhackme.com" rel="noopener" target="_blank">TryHackMe</a> (Laboratórios para aprendizado prático em cibersegurança)</li>
+<li><a href="https://www.hackthebox.com" rel="noopener" target="_blank">Hack The Box</a> (Plataforma de laboratórios e desafios técnicos)</li>
+<li><a href="https://academy.hackthebox.com/" rel="noopener" target="_blank">HTB Academy</a> (Cursos estruturados da Hack The Box)</li>
+<li><a href="https://cyberdefenders.org/" rel="noopener" target="_blank">CyberDefenders</a> (Desafios Blue Team, SIEM e DFIR)</li>
+<li><a href="https://attackdefense.com" rel="noopener" target="_blank">AttackDefense</a> (Laboratórios ofensivos e defensivos interativos)</li>
+<li><a href="https://immersivelabs.com" rel="noopener" target="_blank">ImmersiveLabs</a> (Plataforma hands-on com labs de resposta a incidentes)</li>
+<li><a href="https://pentesterlab.com" rel="noopener" target="_blank">PentesterLab</a> (Laboratórios de segurança web)</li>
+<li><a href="https://www.vulnhub.com" rel="noopener" target="_blank">VulnHub</a> (Máquinas vulneráveis para pentest offline)</li>
+<li><a href="https://zenk-security.com/" rel="noopener" target="_blank">Zenk-Segurança</a> (Comunidade com laboratórios e fóruns)</li>
+<li><a href="https://www.sans.org/challenges/" rel="noopener" target="_blank">SANS Challenger</a> (Treinamentos e desafios profissionais gratuitos)</li>
+</ul>
+</li>
+<!-- Subcategoria 2: Plataformas de CTFs e Desafios -->
+<li>
+<div class="subtitulo">CTFs e Desafios Técnicos</div>
+<ul class="sub-itens">
+<li><a href="https://ctf.hacker101.com" rel="noopener" target="_blank">Hacker101 CTF</a> (Desafios de segurança da HackerOne)</li>
+<li><a href="https://cryptohack.org/" rel="noopener" target="_blank">CryptoHack</a> (Desafios em criptografia)</li>
+<li><a href="https://cryptopals.com" rel="noopener" target="_blank">Cryptopals</a> (Criptografia prática para intermediários e avançados)</li>
+<li><a href="https://w3challs.com" rel="noopener" target="_blank">W3Challs</a> (Desafios web, forense e reversing)</li>
+<li><a href="https://www.wechall.net" rel="noopener" target="_blank">WeChall</a> (Agregador de plataformas CTF)</li>
+<li><a href="https://www.hackthis.co.uk" rel="noopener" target="_blank">HackThis</a> (Desafios de segurança web)</li>
+<li><a href="http://overthewire.org" rel="noopener" target="_blank">OverTheWire</a> (Desafios de shell e segurança Linux)</li>
+<li><a href="https://newbiecontest.org/" rel="noopener" target="_blank">NewbieContest</a> (Desafios para iniciantes e lógicos)</li>
+<li><a href="https://rootinjail.com" rel="noopener" target="_blank">Root In Jail</a> (Desafios Linux com ambientes restritos)</li>
+<li><a href="https://picoctf.com" rel="noopener" target="_blank">PicoCTF</a> (CTF educacional da universidade CMU)</li>
+<li><a href="https://smashthestack.org/" rel="noopener" target="_blank">SmashTheStack</a> (Desafios binários e buffer overflows)</li>
+<li><a href="https://bancocn.com" rel="noopener" target="_blank">Bancocn</a> (Desafios de segurança em português)</li>
+<li><a href="https://ctf.komodosec.com" rel="noopener" target="_blank">CTF Komodo Segurança</a> (Desafios nacionais e técnicos)</li>
+<li><a href="https://hacking-lab.com/" rel="noopener" target="_blank">Hacking-Lab</a> (Ambientes de CTF e simulações corporativas)</li>
+<li><a href="https://lab.pentestit.ru" rel="noopener" target="_blank">PentestIT LAB</a> (Plataforma russa de laboratórios técnicos)</li>
+<li><a href="https://alf.nu/alert1" rel="noopener" target="_blank">Alerta para Ganhar</a> (Desafios de XSS e alert em JavaScript)</li>
+<li><a href="https://cmdchallenge.com" rel="noopener" target="_blank">Desafio CMD</a> (Comandos em shell Linux)</li>
+<li><a href="https://exploit.education" rel="noopener" target="_blank">Exploit Education</a> (Aprendizado sobre exploits e memória)</li>
+<li><a href="https://pwnable.kr" rel="noopener" target="_blank">Pwnable.kr</a> (Exploração de binários realistas)</li>
+<li><a href="https://hstrike.com" rel="noopener" target="_blank">HSTRIKE</a> (Laboratórios ofensivos CTF e treinamento)</li>
+<li><a href="https://hackaflag.com.br/" rel="noopener" target="_blank">Hackaflag BR</a> (CTFs em português com labs técnicos)</li>
+<li><a href="https://capturetheflag.withgoogle.com/" rel="noopener" target="_blank">Google CTF</a> (Competição oficial da Google)
+        </li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="category">
+<h2>Redes de Computadores</h2>
+<ul class="conteudo-categoria">
+<!-- Introdução -->
+<li>
+<div class="subtitulo">O que é Rede de Computadores?</div>
+<ul class="sub-itens">
+<li>
+<a href="https://pt.wikipedia.org/wiki/Rede_de_computadores" rel="noopener" target="_blank">
+            Conceito de Redes
+          </a> (Conjunto de dispositivos interconectados que compartilham dados, recursos e serviços)
+        </li>
+</ul>
+</li>
+<!-- Subcategoria: Modelos de Comunicação -->
+<li>
+<div class="subtitulo">Modelos de Comunicação</div>
+<ul class="sub-itens">
+<li>
+<a href="https://pt.wikipedia.org/wiki/Modelo_OSI" rel="noopener" target="_blank">
+            Modelo OSI
+          </a> (Modelo em 7 camadas para padronização da comunicação)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/TCP/IP_model" rel="noopener" target="_blank">
+            Modelo TCP/IP
+          </a> (Pilha de protocolos usada na internet e redes locais)
+        </li>
+</ul>
+</li>
+<!-- Subcategoria: Protocolos -->
+<li>
+<div class="subtitulo">Protocolos</div>
+<ul class="sub-itens">
+<li>
+<a href="https://en.wikipedia.org/wiki/Internet_Protocol" rel="noopener" target="_blank">IP</a> (Endereçamento e roteamento)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol" rel="noopener" target="_blank">TCP</a> (Conexão confiável orientada a fluxo)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/User_Datagram_Protocol" rel="noopener" target="_blank">UDP</a> (Comunicação sem conexão, leve e rápida)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" rel="noopener" target="_blank">HTTP/HTTPS</a> (Protocolo de transferência da web)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/File_Transfer_Protocol" rel="noopener" target="_blank">FTP</a> (Transferência de arquivos entre dispositivos)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol" rel="noopener" target="_blank">SMTP</a> (Envio de e-mails)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Domain_Name_System" rel="noopener" target="_blank">DNS</a> (Tradução de nomes de domínio em IPs)
+        </li>
+</ul>
+</li>
+<!-- Subcategoria: Equipamentos -->
+<li>
+<div class="subtitulo">Equipamentos</div>
+<ul class="sub-itens">
+<li>
+<a href="https://pt.wikipedia.org/wiki/Modem" rel="noopener" target="_blank">Modem</a> (Modulação e demodulação de sinais)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Roteador" rel="noopener" target="_blank">Roteador</a> (Interconexão e distribuição de pacotes)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Switch" rel="noopener" target="_blank">Switch</a> (Comutação e segmentação de rede local)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Firewall_(computa%C3%A7%C3%A3o)" rel="noopener" target="_blank">Firewall</a> (Controle de tráfego de rede)
+        </li>
+<li>
+<a href="https://pt.wikipedia.org/wiki/Access_point" rel="noopener" target="_blank">Access Point</a> (Ponto de acesso a redes Wi-Fi)
+        </li>
+</ul>
+</li>
+<!-- Subcategoria: Endereçamento e Serviços de Rede -->
+<li>
+<div class="subtitulo">Endereçamento e Serviços de Rede</div>
+<ul class="sub-itens">
+<li>
+<a href="https://en.wikipedia.org/wiki/IP_address" rel="noopener" target="_blank">Endereço IP</a> (Identificação única de dispositivos na rede)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Subnetwork" rel="noopener" target="_blank">Subnetting</a> (Divisão de redes em sub-redes menores)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol" rel="noopener" target="_blank">DHCP</a> (Atribuição automática de IPs)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/MAC_address" rel="noopener" target="_blank">MAC Address</a> (Identificador físico da interface de rede)
+        </li>
+</ul>
+</li>
+<!-- Subcategoria: Segurança em Redes -->
+<li>
+<div class="subtitulo">Segurança em Redes</div>
+<ul class="sub-itens">
+<li>
+<a href="https://en.wikipedia.org/wiki/Network_security" rel="noopener" target="_blank">Segurança de Redes</a> (Práticas para proteger a infraestrutura)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Virtual_private_network" rel="noopener" target="_blank">VPN</a> (Rede privada virtual segura)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Intrusion_detection_system" rel="noopener" target="_blank">IDS/IPS</a> (Detecção e prevenção de intrusos)
+        </li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Wireless_security" rel="noopener" target="_blank">Segurança Wi-Fi</a> (Criptografia e autenticação em redes sem fio)
+        </li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="category">
+<h2>Tipos de Ataques</h2>
+<ul class="conteudo-categoria">
+<!-- Subcategoria: Engenharia Social -->
+<li>
+<div class="subtitulo">Engenharia Social</div>
+<ul class="sub-itens">
+<li><a href="https://pt.wikipedia.org/wiki/Phishing" rel="noopener" target="_blank">Phishing</a> (Engano para obtenção de dados)</li>
+<li><a href="https://en.wikipedia.org/wiki/Social_engineering_(security)" rel="noopener" target="_blank">Engenharia Social</a> (Manipulação psicológica para obter informações)</li>
+<li><a href="https://en.wikipedia.org/wiki/Clickjacking" rel="noopener" target="_blank">Clickjacking</a> (Indução ao clique em elementos ocultos ou falsos)</li>
+<li><a href="https://www.geeksforgeeks.org/evil-twin-attack/" rel="noopener" target="_blank">Evil Twin</a> (Criação de rede Wi-Fi falsa para capturar dados)</li>
+</ul>
+</li>
+<!-- Subcategoria: Ataques a Aplicações Web -->
+<li>
+<div class="subtitulo">Ataques a Aplicações Web</div>
+<ul class="sub-itens">
+<li><a href="https://owasp.org/www-community/attacks/SQL_Injection" rel="noopener" target="_blank">SQL Injection</a> (Injeção em bancos de dados)</li>
+<li><a href="https://owasp.org/www-community/attacks/xss/" rel="noopener" target="_blank">Cross-Site Scripting (XSS)</a> (Scripts maliciosos)</li>
+<li><a href="https://www.imperva.com/learn/application-security/cross-site-request-forgery-csrf/" rel="noopener" target="_blank">CSRF</a> (Falsificação de requisições)</li>
+<li><a href="https://owasp.org/www-community/attacks/XML_External_Entity_(XXE)_Processing" rel="noopener" target="_blank">XXE</a> (Ataque via processamento de XML)</li>
+<li><a href="https://owasp.org/www-community/attacks/Path_Traversal" rel="noopener" target="_blank">Path Traversal</a> (Acesso não autorizado a diretórios)</li>
+<li><a href="https://owasp.org/www-community/attacks/Insecure_direct_object_references" rel="noopener" target="_blank">IDOR</a> (Referência insegura a objetos)</li>
+<li><a href="https://owasp.org/www-community/attacks/Business_Logic_Attack" rel="noopener" target="_blank">Business Logic Attack</a> (Exploração da lógica da aplicação)</li>
+</ul>
+</li>
+<!-- Subcategoria: Ataques de Rede -->
+<li>
+<div class="subtitulo">Ataques de Rede</div>
+<ul class="sub-itens">
+<li><a href="https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/" rel="noopener" target="_blank">DDoS</a> (Negação de serviço distribuída)</li>
+<li><a href="https://www.cloudflare.com/learning/ddos/dns-amplification-ddos-attack/" rel="noopener" target="_blank">DNS Amplification</a> (Amplificação via DNS)</li>
+<li><a href="https://www.cloudflare.com/learning/dns/what-is-dns-spoofing/" rel="noopener" target="_blank">DNS Spoofing</a> (Redirecionamento malicioso)</li>
+<li><a href="https://owasp.org/www-community/attacks/Man-in-the-middle" rel="noopener" target="_blank">Man-in-the-Middle (MitM)</a> (Interceptação de comunicação)</li>
+<li><a href="https://en.wikipedia.org/wiki/Session_fixation" rel="noopener" target="_blank">Session Fixation</a> (Fixação de sessão)</li>
+<li><a href="https://www.comparitech.com/blog/information-security/watering-hole-attack/" rel="noopener" target="_blank">Watering Hole</a> (Ataque por sites confiáveis)</li>
+<li><a href="https://en.wikipedia.org/wiki/Supply_chain_attack" rel="noopener" target="_blank">Supply Chain Attack</a> (Ataque por meio de fornecedores)</li>
+</ul>
+</li>
+<!-- Subcategoria: Ataques a Credenciais e Autenticação -->
+<li>
+<div class="subtitulo">Ataques a Credenciais</div>
+<ul class="sub-itens">
+<li><a href="https://www.kaspersky.com/resource-center/definitions/brute-force-attack" rel="noopener" target="_blank">Brute Force</a> (Tentativas repetidas de senha)</li>
+<li><a href="https://en.wikipedia.org/wiki/Credential_stuffing" rel="noopener" target="_blank">Credential Stuffing</a> (Uso de credenciais vazadas)</li>
+<li><a href="https://en.wikipedia.org/wiki/Keylogger" rel="noopener" target="_blank">Keylogger</a> (Captura de digitação)</li>
+<li><a href="https://www.fortinet.com/resources/cyberglossary/ransomware" rel="noopener" target="_blank">Ransomware</a> (Sequestro de dados e pedido de resgate)</li>
+<li><a href="https://www.fortinet.com/resources/cyberglossary/spoofing" rel="noopener" target="_blank">Spoofing</a> (Falsificação de identidade)</li>
+<li><a href="https://en.wikipedia.org/wiki/Rainbow_table" rel="noopener" target="_blank">Rainbow Table</a> (Quebra de senhas com tabelas pré-calculadas)</li>
+</ul>
+</li>
+<!-- Subcategoria: Exploração e Persistência -->
+<li>
+<div class="subtitulo">Exploração e Persistência</div>
+<ul class="sub-itens">
+<li><a href="https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noopener" target="_blank">Backdoor</a> (Acesso oculto ao sistema)</li>
+<li><a href="https://www.fortinet.com/resources/cyberglossary/rootkit" rel="noopener" target="_blank">Rootkit</a> (Ocultação de atividades maliciosas)</li>
+<li><a href="https://en.wikipedia.org/wiki/Logic_bomb" rel="noopener" target="_blank">Logic Bomb</a> (Código ativado por condição específica)</li>
+<li><a href="https://en.wikipedia.org/wiki/Botnet" rel="noopener" target="_blank">Botnet</a> (Rede de dispositivos controlados remotamente)</li>
+<li><a href="https://www.kaspersky.com/resource-center/threats/drive-by-download" rel="noopener" target="_blank">Drive-by Download</a> (Injeção de malware por navegação)</li>
+</ul>
+</li>
+<!-- Subcategoria: Escalação de Privilégios -->
+<li>
+<div class="subtitulo">Escalonamento de Privilégios</div>
+<ul class="sub-itens">
+<li><a href="https://en.wikipedia.org/wiki/Privilege_escalation" rel="noopener" target="_blank">Escalonamento de Privilégios</a> (Acesso elevado não autorizado)</li>
+</ul>
+</li>
+<!-- Subcategoria: Ataques Avançados -->
+<li>
+<div class="subtitulo">Ataques Avançados</div>
+<ul class="sub-itens">
+<li><a href="https://www.cloudflare.com/learning/security/threats/zero-day/" rel="noopener" target="_blank">Zero-Day</a> (Falhas desconhecidas ou sem patch)</li>
+<li><a href="https://en.wikipedia.org/wiki/Side-channel_attack" rel="noopener" target="_blank">Side Channel Attack</a> (Exploração de canais auxiliares como energia, tempo, etc.)</li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="category">
+<h2>SOC Profissional Open Source</h2>
+<ul class="conteudo-categoria">
+<li>
+<div class="subtitulo">O que é um SOC?</div>
+<ul class="sub-itens">
+<li>
+          Um <strong>SOC (Security Operations Center) Profissional Open Source</strong> é uma estrutura de monitoramento e resposta a incidentes de segurança construída utilizando <strong>ferramentas gratuitas e de código aberto</strong>. Essa abordagem permite montar um ambiente robusto, escalável e altamente personalizável, ideal para empresas que buscam controle total sobre sua segurança sem depender de soluções proprietárias. O SOC Open Source abrange desde firewall e coleta de logs até correlação de eventos, automação de resposta e inteligência de ameaças. Crie o seu proprio SOC com as ferramentas aqui disponibilizadas.
+        </li>
+</ul>
+<li>
+  <div class="subtitulo">Firewall de Borda</div>
+  <ul class="sub-itens">
+    <li><a href="https://mikrotik.com/" rel="noopener" target="_blank">MikroTik</a> (Firewall e roteador de borda)</li>
+    <li><a href="https://www.pfsense.org/" rel="noopener" target="_blank">pfSense</a> (Firewall open source baseado em FreeBSD)</li>
+  </ul>
+</li>
+<li>
+  <div class="subtitulo">Coleta de Logs</div>
+  <ul class="sub-itens">
+    <li><a href="https://www.elastic.co/beats/filebeat" rel="noopener" target="_blank">Filebeat</a> (Envio de logs leves)</li>
+    <li><a href="https://www.elastic.co/logstash" rel="noopener" target="_blank">Logstash</a> (Processamento de logs)</li>
+    <li><a href="https://fluentbit.io/" rel="noopener" target="_blank">Fluent Bit</a> (Coleta e envio de logs em ambientes distribuídos)</li>
+  </ul>
+</li>
+<li>
+  <div class="subtitulo">Backup e Segurança</div>
+  <ul class="sub-itens">
+    <li><a href="https://www.elastic.co/elasticsearch" rel="noopener" target="_blank">Elasticsearch Snapshots</a> (Backup de dados do Elasticsearch)</li>
+    <li><a href="https://rsync.samba.org/" rel="noopener" target="_blank">rsync</a> (Ferramenta de cópia e sincronização de arquivos)</li>
+  </ul>
+</li>
+<li>
+  <div class="subtitulo">Virtualização</div>
+  <ul class="sub-itens">
+    <li><a href="https://www.proxmox.com/en/proxmox-ve" rel="noopener" target="_blank">Proxmox VE</a> (Plataforma de virtualização)</li>
+    <li><a href="https://www.xenproject.org/" rel="noopener" target="_blank">Xen Project</a> (Hipervisor open source)</li>
+  </ul>
+</li>
+<li>
+  <div class="subtitulo">Análise e Correlação</div>
+  <ul class="sub-itens">
+    <li><a href="https://www.elastic.co/elastic-stack" rel="noopener" target="_blank">Elastic Stack</a> (Visualização e análise de dados)</li>
+    <li><a href="https://wazuh.com/" rel="noopener" target="_blank">Wazuh</a> (SIEM e monitoramento de integridade)</li>
+  </ul>
+</li>
+<li>
+  <div class="subtitulo">Gerenciamento de Incidentes</div>
+  <ul class="sub-itens">
+    <li><a href="https://thehive-project.org/" rel="noopener" target="_blank">TheHive</a> (Gestão de incidentes de segurança)</li>
+    <li><a href="https://github.com/certsocietegenerale/fame" rel="noopener" target="_blank">FAME</a> (Framework para análise de malware)</li>
+  </ul>
+</li>
+<li>
+  <div class="subtitulo">Automação de Resposta</div>
+  <ul class="sub-itens">
+    <li><a href="https://www.thehive-project.org/cortex/" rel="noopener" target="_blank">Cortex</a> (Análise e resposta automatizada)</li>
+    <li><a href="https://stackstorm.com/" rel="noopener" target="_blank">StackStorm</a> (Plataforma de automação baseada em eventos)</li>
+  </ul>
+</li>
+<li>
+  <div class="subtitulo">Threat Intelligence</div>
+  <ul class="sub-itens">
+    <li><a href="https://www.opencti.io/" rel="noopener" target="_blank">OpenCTI</a> (Plataforma de inteligência de ameaças)</li>
+    <li><a href="https://www.misp-project.org/" rel="noopener" target="_blank">MISP</a> (Compartilhamento de indicadores de ameaças)</li>
+  </ul>
+</li>
+
+</li>
+</ul>
+</section>
+    </div>
+<footer class="aviso-importante">
+<h3>Importante</h3>
+<p>
+        Todas as informações apresentadas são públicas, disponibilizadas com base nos princípios da disponibilidade e do livre acesso à informação.
+      </p>
+<p>
+        Jonhny Santos não coleta ou trata dados pessoais, respeitando a LGPD (Lei nº 13.709/2018).
+      </p>
+</footer>
+  <footer>
+    <p>&copy; 2025 Jonhny Santos — Todos os direitos reservados.</p>
+    <p>Desenvolvido com 💻 e ☕</p>
+  </footer>
+</body>
+</html>
+
